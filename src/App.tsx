@@ -21,7 +21,6 @@ export const App = () => (
     <Resource
       name="programmes"
       list={ProgrammeList}
-      edit={EditGuesser}
       show={ShowGuesser}
       create={ProgrammeCreate}
     />
