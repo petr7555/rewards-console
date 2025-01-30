@@ -41,7 +41,6 @@ export const App = () => (
     <Resource
       name="rewards"
       list={RewardList}
-      show={ShowGuesser}
       icon={EmojiEventsIcon}
     />
     <Resource

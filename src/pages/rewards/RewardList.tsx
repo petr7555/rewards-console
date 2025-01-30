@@ -9,6 +9,7 @@ import {
   TextInput,
 } from "react-admin";
 import { statusTypes } from "./statusTypes.ts";
+import StatusChangeButtons from "./StatusChangeButtons.tsx";
 
 const RewardList = () => {
   const rewardFilters = [
@@ -40,6 +41,7 @@ const RewardList = () => {
         <ReferenceField source="user_id" reference="users" />
         <DateField source="updated_at" showTime />
         <SelectField source="status" choices={statusTypes} />
+        <StatusChangeButtons />
       </Datagrid>
     </List>
   );
