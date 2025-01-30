@@ -16,13 +16,19 @@ export const App = () => (
     authProvider={authProvider}
   >
     <Resource
-      name="posts"
+      name="programmes"
       list={ListGuesser}
       edit={EditGuesser}
       show={ShowGuesser}
     />
     <Resource
-      name="comments"
+      name="rewards"
+      list={ListGuesser}
+      edit={EditGuesser}
+      show={ShowGuesser}
+    />
+    <Resource
+      name="users"
       list={ListGuesser}
       edit={EditGuesser}
       show={ShowGuesser}
