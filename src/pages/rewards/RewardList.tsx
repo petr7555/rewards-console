@@ -3,6 +3,7 @@ import {
   DateField,
   List,
   ReferenceField,
+  ReferenceInput,
   SelectField,
   TextField,
   TextInput,
@@ -11,6 +12,12 @@ import { statusTypes } from "./statusTypes.ts";
 
 const RewardList = () => {
   const rewardFilters = [
+    <ReferenceInput
+      key="user_ref_filter"
+      source="user_id"
+      reference="users"
+      alwaysOn
+    />,
     <TextInput
       key="user_email_filter"
       source="user_email"
@@ -19,7 +26,7 @@ const RewardList = () => {
     />,
     <TextInput
       key="user_id_filter"
-      source="user_email"
+      source="user_id"
       alwaysOn
       label="User ID"
     />,
@@ -31,8 +38,8 @@ const RewardList = () => {
         <TextField source="id" />
         <TextField source="name" />
         <ReferenceField source="user_id" reference="users" />
-        <SelectField source="status" choices={statusTypes} />
         <DateField source="updated_at" showTime />
+        <SelectField source="status" choices={statusTypes} />
       </Datagrid>
     </List>
   );
