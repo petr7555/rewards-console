@@ -11,6 +11,8 @@ import UserList from './pages/users/UserList.tsx';
 import RewardList from './pages/rewards/RewardList.tsx';
 import ProgrammeList from './pages/programmes/ProgrammeList.tsx';
 import ProgrammeCreate from './pages/programmes/ProgrammeCreate.tsx';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import PersonIcon from '@mui/icons-material/Person';
 
 export const App = () => (
   <Admin
@@ -28,12 +30,14 @@ export const App = () => (
       name="rewards"
       list={RewardList}
       show={ShowGuesser}
+      icon={EmojiEventsIcon}
     />
     <Resource
       name="users"
       list={UserList}
       edit={EditGuesser}
       show={ShowGuesser}
+      icon={PersonIcon}
     />
   </Admin>
 );
