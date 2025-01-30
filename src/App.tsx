@@ -27,7 +27,6 @@ export const App = () => (
     <Resource
       name="rewards"
       list={RewardList}
-      edit={EditGuesser}
       show={ShowGuesser}
     />
     <Resource
