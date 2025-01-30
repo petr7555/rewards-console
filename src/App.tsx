@@ -1,13 +1,15 @@
 import {
   Admin,
   Resource,
-  ListGuesser,
   EditGuesser,
   ShowGuesser,
 } from "react-admin";
 import { Layout } from "./Layout";
 import { dataProvider } from "./dataProvider";
 import { authProvider } from "./authProvider";
+import UserList from './pages/users/UserList.tsx';
+import RewardList from './pages/rewards/RewardList.tsx';
+import ProgrammeList from './pages/programmes/ProgrammeList.tsx';
 
 export const App = () => (
   <Admin
@@ -17,19 +19,19 @@ export const App = () => (
   >
     <Resource
       name="programmes"
-      list={ListGuesser}
+      list={ProgrammeList}
       edit={EditGuesser}
       show={ShowGuesser}
     />
     <Resource
       name="rewards"
-      list={ListGuesser}
+      list={RewardList}
       edit={EditGuesser}
       show={ShowGuesser}
     />
     <Resource
       name="users"
-      list={ListGuesser}
+      list={UserList}
       edit={EditGuesser}
       show={ShowGuesser}
     />
