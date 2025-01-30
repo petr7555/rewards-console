@@ -10,6 +10,7 @@ import { authProvider } from "./authProvider";
 import UserList from './pages/users/UserList.tsx';
 import RewardList from './pages/rewards/RewardList.tsx';
 import ProgrammeList from './pages/programmes/ProgrammeList.tsx';
+import ProgrammeCreate from './pages/programmes/ProgrammeCreate.tsx';
 
 export const App = () => (
   <Admin
@@ -22,6 +23,7 @@ export const App = () => (
       list={ProgrammeList}
       edit={EditGuesser}
       show={ShowGuesser}
+      create={ProgrammeCreate}
     />
     <Resource
       name="rewards"

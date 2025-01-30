@@ -28,11 +28,13 @@
   "rewards": [
     {
       "id": 0,
+      "name": "Free TV",
       "user_id": 0,
       "status": "pending"
     },
     {
       "id": 1,
+      "name": "Amazon voucher $10",
       "user_id": 1,
       "status": "approved"
     }
@@ -40,10 +42,12 @@
   "users": [
     {
       "id": 0,
+      "name": "Anne",
       "email": "anne@gmail.com"
     },
     {
       "id": 1,
+      "name": "Bob",
       "email": "bob@gmail.com"
     }
   ]
