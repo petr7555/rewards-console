@@ -14,9 +14,21 @@ import ProgrammeCreate from './pages/programmes/ProgrammeCreate.tsx';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import PersonIcon from '@mui/icons-material/Person';
 
+const futureTheme = {
+  palette: {
+    primary: {
+      main: '#a71930',
+    },
+    secondary: {
+      main: '#a71930',
+    },
+  },
+};
+
 export const App = () => (
   <Admin
     layout={Layout}
+    theme={futureTheme}
     dataProvider={dataProvider}
     authProvider={authProvider}
   >
