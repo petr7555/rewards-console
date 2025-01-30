@@ -1,4 +1,5 @@
 import {
+  CanAccess,
   Datagrid,
   DateField,
   List,
@@ -7,7 +8,7 @@ import {
   SelectField,
   TextField,
   TextInput,
-} from "react-admin";
+} from 'react-admin';
 import { statusTypes } from "./statusTypes.ts";
 import StatusChangeButtons from "./StatusChangeButtons.tsx";
 
@@ -41,7 +42,9 @@ const RewardList = () => {
         <ReferenceField source="user_id" reference="users" />
         <DateField source="updated_at" showTime />
         <SelectField source="status" choices={statusTypes} />
-        <StatusChangeButtons />
+        <CanAccess action="update">
+          <StatusChangeButtons />
+        </CanAccess>
       </Datagrid>
     </List>
   );
