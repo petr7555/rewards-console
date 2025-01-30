@@ -1,4 +1,12 @@
-import { Datagrid, List, ReferenceField, TextField } from 'react-admin';
+import {
+  Datagrid,
+  DateField,
+  List,
+  ReferenceField,
+  SelectField,
+  TextField,
+} from "react-admin";
+import { statusTypes } from "./statusTypes.ts";
 
 const RewardList = () => (
   <List>
@@ -6,7 +14,8 @@ const RewardList = () => (
       <TextField source="id" />
       <TextField source="name" />
       <ReferenceField source="user_id" reference="users" />
-      <TextField source="status" />
+      <SelectField source="status" choices={statusTypes} />
+      <DateField source="updated_at" showTime />
     </Datagrid>
   </List>
 );
