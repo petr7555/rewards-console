@@ -1,4 +1,4 @@
-# rewards-console
+# rewards-console test
 
 ## Installation
 
